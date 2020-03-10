@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+
+import { Container } from "@material-ui/core";
+
 import UserCard from './components/UserCard';
 import FollowerCard from './components/FollowerCard'
 import './App.css';
@@ -39,11 +42,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h2>Github User Card</h2>
+      <Container className="app-wrapper">
         <UserCard userList={this.state.userList} />
         <FollowerCard followerList={this.state.followerList}/>
-      </div>
+      </Container>
     );
   }
 }
